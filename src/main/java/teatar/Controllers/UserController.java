@@ -23,4 +23,10 @@ public class UserController {
         userRepo.save(user);
         return user;
     }
+
+    @RequestMapping("/getbyid")
+    public Users getById(@RequestParam(value="id", defaultValue = "-1") Long id) {
+        Users foundCustomer = userRepo.findOne(id);
+        return foundCustomer;
+    }
 }

@@ -21,6 +21,8 @@ public class Users {
     @OneToMany
     private List<Reservation> reservation;
 
+    public Users(){}
+
     public Users(String name, String surname, String username, String password) {
         this.name = name;
         this.surname = surname;
